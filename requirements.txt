@@ -1,0 +1,9 @@
+streamlit
+opencv-python-headless
+numpy
+pandas
+st-gsheets-connection
+scipy
+scikit-learn
+scikit-image
+Pillow
