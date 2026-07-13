@@ -21,8 +21,8 @@ FONT_SCALE = 0.4
 TEXT_COLOR = (70, 70, 70)
 
 # --- HEADER SECTION ---
-st.title("🎨 SOTA 5D Joint Spatial-Color Canvas Generator")
-st.write("Deconstruct target imagery across a multi-dimensional pixel manifold to capture micro-scale structures with perfect topological containment.")
+st.title("🎨 Custom Paint-by-Numbers Generator")
+st.write("Turn any portrait into a clean, printable paint-by-numbers canvas.")
 
 st.markdown("---")
 
@@ -140,7 +140,7 @@ st.markdown("---")
 
 # --- SECTION 2: TARGET TECHNICAL SPECIFICATIONS (VERTICAL DESIGN) ---
 st.subheader("🛠️ Target Technical Specifications")
-st.write("The processing engine computes vector boundaries utilizing a 5D coordinate clustering architecture:")
+st.write("The engine derives a 16-color palette from your image (LAB k-means), then extracts clean, paintable regions.")
 col_spec1, col_spec2 = st.columns(2)
 with col_spec1:
     st.metric(
@@ -159,17 +159,18 @@ with col_spec2:
 col_spec3, col_spec4 = st.columns(2)
 with col_spec3:
     st.metric(
-        label="Manifold Coordinate Space Vectors", 
-        value="5D Joint Matrix", 
-        delta="V = [L, A, B, x, y]",
-        delta_arrow="up"
-    )
-
-with col_spec4:
-    st.metric(
         label="Maximum Color Partition Allocation", 
         value="K = 16 Distinct Colors"
     )
+
+# with col_spec4:
+#     st.metric(
+#         label="Manifold Coordinate Space Vectors", 
+#         value="5D Joint Matrix", 
+#         delta="V = [L, A, B, x, y]",
+#         delta_arrow="up"
+#     )
+    
 # st.metric(
 #     label="Output Canvas Geometry", 
 #     value="A4 Standard Dimensions"
@@ -201,8 +202,8 @@ st.markdown("---")
 # --- SECTION 3: THE LIVE PRODUCTION GENERATOR ---
 st.subheader("🚀 Generate Your Custom Canvas")
 
-user_name = st.text_input("Enter your name to unlock processing credentials:", placeholder="Your Name")
-uploaded_file = st.file_uploader("Upload your target image asset (JPG/PNG)", type=["jpg", "jpeg", "png"], disabled=not user_name)
+user_name = st.text_input("Enter your name to start:", placeholder="Your Name")
+uploaded_file = st.file_uploader("Upload your target image (JPG/PNG)", type=["jpg", "jpeg", "png"], disabled=not user_name)
 
 if uploaded_file and user_name:
     file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
