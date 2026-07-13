@@ -26,65 +26,8 @@ st.write("Deconstruct target imagery across a multi-dimensional pixel manifold t
 
 st.markdown("---")
 
-# --- SECTION 1: TARGET TECHNICAL SPECIFICATIONS (VERTICAL DESIGN) ---
-st.subheader("🛠️ Target Technical Specifications")
-st.write("The processing engine computes vector boundaries utilizing a 5D coordinate clustering architecture:")
-col_spec1, col_spec2 = st.columns(2)
-with col_spec1:
-    st.metric(
-        label="Output Canvas Geometry", 
-        value="A4 Standard"
-    )
 
-with col_spec2:
-    st.metric(
-        label="Print Resolution Blueprint", 
-        value="300 DPI", 
-        delta="2480 x 3508 px", 
-        delta_arrow="up"
-    )
-
-col_spec3, col_spec4 = st.columns(2)
-with col_spec3:
-    st.metric(
-        label="Manifold Coordinate Space Vectors", 
-        value="5D Joint Matrix", 
-        delta="V = [L, A, B, x, y]",
-        delta_arrow="up"
-    )
-
-with col_spec4:
-    st.metric(
-        label="Maximum Color Partition Allocation", 
-        value="K = 16 Distinct Colors"
-    )
-# st.metric(
-#     label="Output Canvas Geometry", 
-#     value="A4 Standard Dimensions"
-# )
-
-# st.metric(
-#     label="Print Resolution Blueprint", 
-#     value="300 DPI", 
-#     delta="2480 x 3508 px", 
-#     delta_arrow="up"
-# )
-
-# st.metric(
-#     label="Manifold Coordinate Space Vectors", 
-#     value="5D Joint Matrix", 
-#     delta="V = [L, A, B, x, y]",
-#     delta_arrow="up"
-# )
-
-# st.metric(
-#     label="Maximum Color Partition Allocation", 
-#     value="K = 16 Distinct Inks"
-# )
-
-st.markdown("---")
-
-# --- SECTION 2: PRE-RENDERED ALGORITHMIC SHOWCASE ---
+# --- SECTION 1: PRE-RENDERED ALGORITHMIC SHOWCASE ---
 st.subheader("🖼️ Engine Output Verification Gallery")
 # st.write("Examine how the multi-dimensional mapping preserves localized anatomy (such as eyes and lips) without generating scattered noise islands:")
 st.write("Examine archived showcase examples directly pulled from localized run directories to see how structural detail is maintained:")
@@ -193,8 +136,70 @@ with tab2:
 
 st.markdown("---")
 
+
+
+# --- SECTION 2: TARGET TECHNICAL SPECIFICATIONS (VERTICAL DESIGN) ---
+st.subheader("🛠️ Target Technical Specifications")
+st.write("The processing engine computes vector boundaries utilizing a 5D coordinate clustering architecture:")
+col_spec1, col_spec2 = st.columns(2)
+with col_spec1:
+    st.metric(
+        label="Output Canvas Geometry", 
+        value="A4 Standard"
+    )
+
+with col_spec2:
+    st.metric(
+        label="Print Resolution Blueprint", 
+        value="300 DPI", 
+        delta="2480 x 3508 px", 
+        delta_arrow="up"
+    )
+
+col_spec3, col_spec4 = st.columns(2)
+with col_spec3:
+    st.metric(
+        label="Manifold Coordinate Space Vectors", 
+        value="5D Joint Matrix", 
+        delta="V = [L, A, B, x, y]",
+        delta_arrow="up"
+    )
+
+with col_spec4:
+    st.metric(
+        label="Maximum Color Partition Allocation", 
+        value="K = 16 Distinct Colors"
+    )
+# st.metric(
+#     label="Output Canvas Geometry", 
+#     value="A4 Standard Dimensions"
+# )
+
+# st.metric(
+#     label="Print Resolution Blueprint", 
+#     value="300 DPI", 
+#     delta="2480 x 3508 px", 
+#     delta_arrow="up"
+# )
+
+# st.metric(
+#     label="Manifold Coordinate Space Vectors", 
+#     value="5D Joint Matrix", 
+#     delta="V = [L, A, B, x, y]",
+#     delta_arrow="up"
+# )
+
+# st.metric(
+#     label="Maximum Color Partition Allocation", 
+#     value="K = 16 Distinct Inks"
+# )
+
+st.markdown("---")
+
+
+
 # --- SECTION 3: THE LIVE PRODUCTION GENERATOR ---
-st.subheader("🚀 Generate Your Custom 5D Canvas")
+st.subheader("🚀 Generate Your Custom Canvas")
 
 user_name = st.text_input("Enter your name to unlock processing credentials:", placeholder="Your Name")
 uploaded_file = st.file_uploader("Upload your target image asset (JPG/PNG)", type=["jpg", "jpeg", "png"], disabled=not user_name)
