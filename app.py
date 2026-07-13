@@ -8,7 +8,7 @@ from streamlit_gsheets import GSheetsConnection
 from utils import *
 
 # --- STYLING & PAGE SETUP ---
-st.set_page_config(page_title="Adobe-Style 5D Canvas Generator", page_icon="🎨", layout="centered")
+st.set_page_config(page_title="Paint-by-Numbers Generator", page_icon="🎨", layout="centered")
 
 # Engine Parameter Configurations (Locked V2 Spatial Core)
 TARGET_W = 2480  # A4 width @ 300 DPI
@@ -261,7 +261,7 @@ if uploaded_file and user_name:
                     "User Name": user_name,
                     "Original Width": w_orig,
                     "Original Height": h_orig,
-                    "Status": "SUCCESS_5D_ADOBE"
+                    "Status": "SUCCESS_Live"
                 }])
                 
                 updated_df = pd.concat([df, new_row], ignore_index=True)
